@@ -1,0 +1,3 @@
+Ngan hang: 123
+So tai khoan: 123
+Gia tien: 70000

@@ -11,6 +11,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import com.mycompany.pttkhttt.bus.BUS_KHACHHANG;
+import com.mycompany.pttkhttt.bus.BUS_DANGKYTOURDULICH;
 import java.util.ArrayList;
 /**
  *
@@ -23,9 +24,6 @@ public class DangKyTourDuLich extends javax.swing.JFrame {
      */
     public DangKyTourDuLich() {
         initComponents();
-
-        buttonGroup1.add(jRadioButton1);
-        buttonGroup1.add(jRadioButton2);
         
         BUS_TOURDULICH busTourDuLich = new BUS_TOURDULICH();
         List<BUS_TOURDULICH> tourDuLichList = busTourDuLich.LayTourDuLich();
@@ -64,9 +62,9 @@ public class DangKyTourDuLich extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
+        jTextField4 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -94,8 +92,7 @@ public class DangKyTourDuLich extends javax.swing.JFrame {
 
         jLabel7.setText("Chọn hình thức:");
 
-        jTextField3.setEditable(false);
-
+        buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("dịch vụ đưa đón");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +100,7 @@ public class DangKyTourDuLich extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("tự túc di chuyển");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -119,23 +117,22 @@ public class DangKyTourDuLich extends javax.swing.JFrame {
                                 .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING))
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel6))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel7)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dateTimePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, 529, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton1)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jRadioButton2)))
-                            .addComponent(dateTimePicker1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(jLabel6)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jRadioButton2)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jLabel7)
+                                    .addGap(25, 25, 25)
+                                    .addComponent(jRadioButton1)))))
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -152,7 +149,7 @@ public class DangKyTourDuLich extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -312,11 +309,18 @@ public class DangKyTourDuLich extends javax.swing.JFrame {
         }
         else{
             BUS_KHACHHANG busKhachHang = new BUS_KHACHHANG();
-            System.out.println(ids);
             if(busKhachHang.KiemTraIdKH(ids)){
                 List<BUS_KHACHHANG> khachHangList = new ArrayList<>();
                 khachHangList=busKhachHang.LayKhachHang(ids);
-               
+                BUS_DANGKYTOURDULICH busDangKyTourDuLich = new BUS_DANGKYTOURDULICH();
+                String hinhthuc;
+                if(buttonGroup1.getSelection().equals(jRadioButton1.getModel())){
+                    hinhthuc = jRadioButton1.getText();
+                }
+                else{
+                    hinhthuc = jRadioButton2.getText();
+                }
+                busDangKyTourDuLich.GuiDoiTac(new BUS_DANGKYTOURDULICH(khachHangList, hinhthuc, jComboBox1.getSelectedItem().toString(),jTextField1.getText(), jTextField4.getText(), dateTimePicker1.getDateTimeStrict()));
             }
             else{
                 JOptionPane.showMessageDialog(this, "Mã khách hàng không hơp lệ, vui lòng kiểm tra lại các mã khách hàng đã nhập");
@@ -383,6 +387,6 @@ public class DangKyTourDuLich extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

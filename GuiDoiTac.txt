@@ -1,0 +1,38 @@
+Danh sach khach hang:
+
+Khach hang 1:
+Ten khach hang: John Doe
+Dia chi: 123 Main St
+Email: johndoe@example.com
+Id_kh: KH001
+Ngay den: 2023-06-01T10:00
+SDT: 01234567890
+So dem luu tru: 1
+So luong hanh ly: 5
+
+Khach hang 2:
+Ten khach hang: Jane Smith
+Dia chi: 456 Elm St
+Email: janesmith@example.com
+Id_kh: KH002
+Ngay den: 2023-06-02T11:00
+SDT: 09876543210
+So dem luu tru: 2
+So luong hanh ly: 3
+
+Khach hang 3:
+Ten khach hang: David Johnson
+Dia chi: 789 Oak St
+Email: davidjohnson@example.com
+Id_kh: KH003
+Ngay den: 2023-06-03T12:00
+SDT: 05551234567
+So dem luu tru: 1
+So luong hanh ly: 0
+
+
+Id Tour du lich da chon: R11801444
+Hinh Thuc: tự túc di chuyển
+So nguoi tham gia: 3
+Nhu cau dac biet: can them phu kien cho meo
+Thoi diem khoi hanh: 2023-06-08T01:00

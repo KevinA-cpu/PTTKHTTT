@@ -22,8 +22,7 @@ public class BUS_KHACHHANG {
     private final int sodemluutru;
     private final int soluonghanhly;
     private final String tenkhachhang;
-
-
+    
     public BUS_KHACHHANG() {
         this.diachi = null;
         this.email = null;
@@ -44,6 +43,38 @@ public class BUS_KHACHHANG {
         this.sodemluutru = sodemluutru;
         this.soluonghanhly = soluonghanhly;
         this.tenkhachhang = tenkhachhang;
+    }
+     
+    public String getDiachi() {
+        return diachi;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getId_kh() {
+        return id_kh;
+    }
+
+    public LocalDateTime getNgayDen() {
+        return NgayDen;
+    }
+
+    public String getSdt() {
+        return sdt;
+    }
+
+    public int getSodemluutru() {
+        return sodemluutru;
+    }
+
+    public int getSoluonghanhly() {
+        return soluonghanhly;
+    }
+
+    public String getTenkhachhang() {
+        return tenkhachhang;
     }
     
     public boolean KiemTraIdKH(String[] idKH){

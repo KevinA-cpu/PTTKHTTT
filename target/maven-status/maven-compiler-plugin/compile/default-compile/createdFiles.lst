@@ -4,9 +4,11 @@ com\mycompany\pttkhttt\BatDau$1.class
 com\mycompany\pttkhttt\BatDau$3.class
 com\mycompany\pttkhttt\db\DAO_DICHVUDB.class
 com\mycompany\pttkhttt\DangKyDichVu$8.class
+com\mycompany\pttkhttt\bus\BUS_DANGKYTOURDULICH.class
 com\mycompany\pttkhttt\DangKyTourDuLich$1.class
 com\mycompany\pttkhttt\db\DatabaseConnection.class
 com\mycompany\pttkhttt\db\DAO_TOURDULICHDB.class
+com\mycompany\pttkhttt\db\DAO_DANGKYTOURDULICHDB.class
 com\mycompany\pttkhttt\DangKyTourDuLich$3.class
 com\mycompany\pttkhttt\bus\BUS_DICHVU.class
 com\mycompany\pttkhttt\DangKyDichVu$3.class

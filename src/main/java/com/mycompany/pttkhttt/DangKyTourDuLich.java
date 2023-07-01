@@ -321,6 +321,7 @@ public class DangKyTourDuLich extends javax.swing.JFrame {
                     hinhthuc = jRadioButton2.getText();
                 }
                 busDangKyTourDuLich.GuiDoiTac(new BUS_DANGKYTOURDULICH(khachHangList, hinhthuc, jComboBox1.getSelectedItem().toString(),jTextField1.getText(), jTextField4.getText(), dateTimePicker1.getDateTimeStrict()));
+                JOptionPane.showMessageDialog(this, "Đăng ký thành công, hãy chờ kết quả từ đối tác");
             }
             else{
                 JOptionPane.showMessageDialog(this, "Mã khách hàng không hơp lệ, vui lòng kiểm tra lại các mã khách hàng đã nhập");
